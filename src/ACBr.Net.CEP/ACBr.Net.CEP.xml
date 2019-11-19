@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ACBr.Net.CEP</name>
+    </assembly>
+    <members>
+        <member name="T:ACBr.Net.CEP.ACBrCEP">
+            <summary>
+            Class ACBrCEP. This class cannot be inherited.
+            </summary>
+            <seealso cref="T:ACBr.Net.Core.ACBrComponent" />
+        </member>
+        <member name="E:ACBr.Net.CEP.ACBrCEP.OnBuscaEfetuada">
+            <summary>
+            Evento disparado depois da buscar ser efetuada com sucesso.
+            </summary>
+        </member>
+        <member name="P:ACBr.Net.CEP.ACBrCEP.WebService">
+            <summary>
+            Retorna ou define o webservice utilizado nas pesquisas.
+            </summary>
+            <value>The web service.</value>
+        </member>
+        <member name="P:ACBr.Net.CEP.ACBrCEP.Resultados">
+            <summary>
+            Retorna a lista de endereços que foram retornados pela pesquisa.
+            </summary>
+            <value>Os endereços.</value>
+        </member>
+        <member name="P:ACBr.Net.CEP.ACBrCEP.ChaveAcesso">
+            <summary>
+            Retorna ou define a chave de acesso utilizada por alguns webservices.
+            </summary>
+            <value>A chave de acesso.</value>
+        </member>
+        <member name="P:ACBr.Net.CEP.ACBrCEP.Usuario">
+            <summary>
+            Retorna ou define o usuário utilizado por alguns webservices.
+            </summary>
+            <value>The usuario.</value>
+        </member>
+        <member name="P:ACBr.Net.CEP.ACBrCEP.Senha">
+            <summary>
+            Retorna ou define a senha utilizada por alguns webservices.
+            </summary>
+            <value>The senha.</value>
+        </member>
+        <member name="P:ACBr.Net.CEP.ACBrCEP.PesquisarIBGE">
+            <summary>
+            Retorna ou define se deve pesquisar o IBGE caso o webservice não retorna este dado.
+            </summary>
+            <value><c>true</c> para pesquisar; caso contrário, <c>false</c>.</value>
+        </member>
+        <member name="M:ACBr.Net.CEP.ACBrCEP.BuscarPorCEP(System.String)">
+            <summary>
+            Buscar o endereço para o CEP passado.
+            </summary>
+            <param name="cep">The cep.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:ACBr.Net.CEP.ACBrCEP.BuscarPorLogradouro(ACBr.Net.CEP.ACBrUF,System.String,System.String,System.String,System.String)">
+            <summary>
+            Busca os dados do endereço pelo logradouro.
+            </summary>
+            <param name="municipio">The municipio.</param>
+            <param name="tipoLogradouro">The tipo logradouro.</param>
+            <param name="logradouro">The logradouro.</param>
+            <param name="uf">The uf.</param>
+            <param name="bairro">The bairro.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:ACBr.Net.CEP.ACBrCEP.OnInitialize">
+            <summary>
+            Called when [initialize].
+            </summary>
+        </member>
+        <member name="M:ACBr.Net.CEP.ACBrCEP.OnDisposing">
+            <summary>
+            Called when [disposing].
+            </summary>
+        </member>
+        <member name="T:ACBr.Net.CEP.ACBrEndereco">
+            <summary>
+            Class ACBrEndereco. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="T:ACBr.Net.CEP.ACBrUF">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.AC">
+            <summary>
+            Acre
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.AL">
+            <summary>
+            Alagoas
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.AM">
+            <summary>
+            Amazonas
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.AP">
+            <summary>
+            Amapá
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.BA">
+            <summary>
+            Bahia
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.CE">
+            <summary>
+            Ceará
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.DF">
+            <summary>
+            Distrito Federal
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.ES">
+            <summary>
+            Espírito Santo
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.GO">
+            <summary>
+            Goiás
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.MA">
+            <summary>
+            Maranhão
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.MG">
+            <summary>
+            Minas Gerais
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.MS">
+            <summary>
+            Mato Grosso do Sul
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.MT">
+            <summary>
+            Mato Grosso
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.PA">
+            <summary>
+            Pará
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.PB">
+            <summary>
+            Paraíba
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.PE">
+            <summary>
+            Pernambuco
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.PI">
+            <summary>
+            Piauí
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.PR">
+            <summary>
+            Paraná
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.RJ">
+            <summary>
+            Rio de Janeiro
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.RN">
+            <summary>
+            Rio Grande do Norte
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.RO">
+            <summary>
+            Rondônia
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.RR">
+            <summary>
+            Roraima
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.RS">
+            <summary>
+            Rio Grande do Sul
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.SC">
+            <summary>
+            Santa Catarina
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.SE">
+            <summary>
+            Sergipe
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.SP">
+            <summary>
+            São Paulo
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.TO">
+            <summary>
+            Tocantins
+            </summary>
+        </member>
+        <member name="F:ACBr.Net.CEP.ACBrUF.AN">
+            <summary>
+            NA
+            </summary>
+        </member>
+    </members>
+</doc>

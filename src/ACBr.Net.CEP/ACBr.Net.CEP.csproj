@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>acbr.net.snk</AssemblyOriginatorKeyFile>
+    <Copyright>Copyright © Grupo ACBr.Net 2014 - 2019</Copyright>
+    <Company>ACBr.Net</Company>
+    <Authors>ACBr.Net</Authors>
+    <PackageProjectUrl>https://acbrnet.github.io</PackageProjectUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIconUrl>https://avatars2.githubusercontent.com/u/7342977?v=3&amp;amp;s=200</PackageIconUrl>
+    <RepositoryUrl>https://github.com/ACBrNet/ACBr.Net.CEP</RepositoryUrl>
+    <RepositoryType>Github</RepositoryType>
+    <PackageTags>ACBr.Net CEP</PackageTags>
+    <Description>Biblioteca para consulta de CEP</Description>
+    <NeutralLanguage>pt-BR</NeutralLanguage>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
+    <DefineConstants>NETCORE;NETSTANDARD;NETSTANDARD2_0</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net45'">
+    <DefineConstants>NET45;NETFULL</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <DocumentationFile>E:\Programacao\ACBr\ACBr.Net\ACBr.Net.CEP\src\ACBr.Net.CEP\ACBr.Net.CEP.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45'">
+    <None Remove="ACBrCEP.bmp" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45'">
+    <EmbeddedResource Include="ACBrCEP.bmp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ACBr.Net.Core">
+      <Version>1.2.3.3</Version>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net452' ">
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+
+</Project>
