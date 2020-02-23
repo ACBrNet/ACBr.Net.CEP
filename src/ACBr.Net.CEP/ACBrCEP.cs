@@ -32,11 +32,12 @@
 using System;
 using System.Collections.Generic;
 using ACBr.Net.Core;
-using ACBr.Net.Core.Exceptions;
 using ACBr.Net.Core.Extensions;
 
 #if !NETSTANDARD
+
 using System.Drawing;
+
 #endif
 
 namespace ACBr.Net.CEP
@@ -146,7 +147,7 @@ namespace ACBr.Net.CEP
             return Resultados.Count;
         }
 
-        private CepWsClass GetProvider()
+        private WebserviceCEP GetProvider()
         {
             switch (WebService)
             {

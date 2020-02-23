@@ -6,7 +6,7 @@
 // Last Modified By : RFTD
 // Last Modified On : 02-21-2017
 // ***********************************************************************
-// <copyright file="CepWsClass.cs" company="ACBr.Net">
+// <copyright file="WebserviceCEP.cs" company="ACBr.Net">
 //		        		   The MIT License (MIT)
 //	     		    Copyright (c) 2014 - 2017 Grupo ACBr.Net
 //
@@ -33,7 +33,7 @@ using System;
 
 namespace ACBr.Net.CEP
 {
-    internal abstract class CepWsClass
+    internal abstract class WebserviceCEP
     {
         public virtual ACBrEndereco[] BuscarPorCEP(string cep)
         {

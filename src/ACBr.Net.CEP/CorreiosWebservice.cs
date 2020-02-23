@@ -39,7 +39,7 @@ using ACBr.Net.Core.Extensions;
 
 namespace ACBr.Net.CEP
 {
-    internal sealed class CorreiosWebservice : CepWsClass
+    internal sealed class CorreiosWebservice : WebserviceCEP
     {
         #region Fields
 
