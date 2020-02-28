@@ -85,13 +85,13 @@ namespace ACBr.Net.CEP
 
                 var endereco = new ACBrEndereco
                 {
-                    CEP = element.Element("cep").GetValue<string>(),
-                    Bairro = element.Element("bairro").GetValue<string>(),
-                    Municipio = element.Element("cidade").GetValue<string>(),
+                    CEP = element.ElementAnyNs("cep").GetValue<string>(),
+                    Bairro = element.ElementAnyNs("bairro").GetValue<string>(),
+                    Municipio = element.ElementAnyNs("cidade").GetValue<string>(),
                     Complemento =
-                        $"{element.Element("complemento").GetValue<string>()}{Environment.NewLine}{element.Element("complemento2").GetValue<string>()}",
-                    Logradouro = element.Element("end").GetValue<string>(),
-                    UF = (ACBrUF)Enum.Parse(typeof(ACBrUF), element.Element("uf").GetValue<string>())
+                        $"{element.ElementAnyNs("complemento").GetValue<string>()}{Environment.NewLine}{element.ElementAnyNs("complemento2").GetValue<string>()}",
+                    Logradouro = element.ElementAnyNs("end").GetValue<string>(),
+                    UF = (ACBrUF)Enum.Parse(typeof(ACBrUF), element.ElementAnyNs("uf").GetValue<string>())
                 };
 
                 endereco.TipoLogradouro = endereco.Logradouro.Split(' ')[0];

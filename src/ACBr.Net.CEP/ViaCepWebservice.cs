@@ -131,7 +131,7 @@ namespace ACBr.Net.CEP
                 Complemento = element.ElementAnyNs("complemento").GetValue<string>(),
                 Bairro = element.ElementAnyNs("bairro").GetValue<string>(),
                 Municipio = element.ElementAnyNs("localidade").GetValue<string>(),
-                UF = element.ElementAnyNs("uf").GetValue<ACBrUF>(),
+                UF = (ACBrUF)Enum.Parse(typeof(ACBrUF), element.ElementAnyNs("uf").GetValue<string>()),
                 IBGEMunicipio = element.ElementAnyNs("ibge").GetValue<string>(),
             };
 
